@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Каталог";
+}
+
+<div style="min-height: 100vh;">
+    <h2 class="text-center">Список товарів</h2>
+    <div class="container">
+        <div class="row">
+            @foreach (var product in Model)
+            {
+                <div class="col-3 p-2">
+                    <div class="card h-100 p-3 card-hover">
+                        <div style="height: 175px;">
+                            <img class="w-100 h-100" style="object-fit: contain;" src="@product.Image" alt="@product.Name" />
+                        </div>
+                        <h3 class="card-header mt-1">@product.Name</h3>
+                        <div class="card-body">
+                            <p class="card-text">@product.Description</p>
+                            <p class="fw-bold">Ціна: @product.Price грн</p>
+                            <p class="text-muted">Кількість: @product.Amount шт.</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
