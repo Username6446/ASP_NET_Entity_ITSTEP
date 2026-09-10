@@ -42,7 +42,13 @@
             <input asp-for="Amount" type="number" class="form-control" id="amount" placeholder="Введіть кількість">
             <span class="mx-2" style="color: red; font-size: 0.8rem;">Тут буде текст помилки валідації</span>
         </div>
-        
+        @* categoryid *@
+        <div class="form-group mb-3">
+            <label asp-for="CategoryId" class="form-label">Категорія</label>
+            <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select">
+                <option value="">-- Без категорії --</option>
+            </select>
+        </div>
         <div class="mt-4 text-center">
             <input type="submit" class="btn btn-primary w-50" value="Додати" />
         </div>

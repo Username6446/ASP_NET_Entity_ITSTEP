@@ -25,6 +25,11 @@
                         </div>
                         <h3 class="card-header mt-1">@product.Name</h3>
                         <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-secondary">
+                                    @(product.Category?.Name ?? "Без категорії")
+                                </span>
+                            </div>
                             <p class="card-text">@product.Description</p>
                             <p class="fw-bold">Ціна: @product.Price грн</p>
                             <p class="text-muted">Кількість: @product.Amount шт.</p>
