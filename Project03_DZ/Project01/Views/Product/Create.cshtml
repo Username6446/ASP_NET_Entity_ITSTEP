@@ -14,7 +14,7 @@
         @* name *@
         <div>
             <label for="name" class="form-label">Назва</label>
-            <input asp-for="Name" type="text" class="form-control" id="name" placeholder="Введіть назву категорії">
+            <input asp-for="Name" type="text" class="form-control" id="name" placeholder="Введіть назву товару">
             <span class="mx-2" style="color: red; font-size: 0.8rem;">Тут буде текст помилки валідації</span>
         </div>
         @* price *@
@@ -33,7 +33,7 @@
         @* descripton *@
         <div>
             <label for="description" class="form-label mt-4">Опис</label>
-            <input asp-for="Description" type="text" class="form-control" id="description" placeholder="Введіть опис категорії">
+            <input asp-for="Description" type="text" class="form-control" id="description" placeholder="Введіть опис товару">
             <span class="mx-2" style="color: red; font-size: 0.8rem;">Тут буде текст помилки валідації</span>
         </div>
         @* amount *@
@@ -45,9 +45,7 @@
         @* categoryid *@
         <div class="form-group mb-3">
             <label asp-for="CategoryId" class="form-label">Категорія</label>
-            <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select">
-                <option value="">-- Без категорії --</option>
-            </select>
+            <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select"></select>
         </div>
         <div class="mt-4 text-center">
             <input type="submit" class="btn btn-primary w-50" value="Додати" />

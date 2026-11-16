@@ -1,4 +1,6 @@
-﻿namespace Project01.ViewModels
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace Project01.ViewModels
 {
     public class ProductUpdateVM
     {
@@ -8,6 +10,8 @@
         public string? Description { get; set; }
         public string? Image { get; set; }
         public int? Amount { get; set; }
-        public int? CategoryId { get; set; } = 1;
+        public int? CategoryId { get; set; }
+        public SelectList? Categories { get; set; }
+
     }
 }

@@ -1,19 +1,18 @@
 ﻿@model IEnumerable<Product>
 
 @{
-    ViewData["Title"] = "Каталог";
+    ViewData["Title"] = "Товари";
 }
 
 <div style="min-height: 100vh;">
     <div class="d-flex">
-        <h2 class="text-center flex-grow-1 w-100">Каталог товарів</h2>
+        <h2 class="text-center flex-grow-1 w-100">Список товарів</h2>
         <div class="me-3">
             <a asp-action="Create" asp-controller="Product">
-            <i class="bi bi-plus-circle" style="font-size: 1.6rem;"></i>
-         </a>
+                <i class="bi bi-plus-circle" style="font-size: 1.6rem;"></i>
+            </a>
         </div>
     </div>
-    <h2 class="text-center">Список товарів</h2>
     <div class="container">
         <div class="row">
             @foreach (var product in Model)

@@ -11,10 +11,11 @@
           method="post"
           class="m-auto border p-5 mt-4 rounded-3"
           style="width: 40%; background-color: #efefef;">
+        <input type="hidden" asp-for="Id" />
         @* name *@
         <div>
             <label for="name" class="form-label">Назва</label>
-            <input asp-for="Name" type="text" class="form-control" id="name" placeholder="Введіть назву категорії">
+            <input asp-for="Name" type="text" class="form-control" id="name" placeholder="Введіть назву товару">
             <span class="mx-2" style="color: red; font-size: 0.8rem;">Тут буде текст помилки валідації</span>
         </div>
         @* price *@
@@ -33,7 +34,7 @@
         @* descripton *@
         <div>
             <label for="description" class="form-label mt-4">Опис</label>
-            <input asp-for="Description" type="text" class="form-control" id="description" placeholder="Введіть опис категорії">
+            <input asp-for="Description" type="text" class="form-control" id="description" placeholder="Введіть опис товару">
             <span class="mx-2" style="color: red; font-size: 0.8rem;">Тут буде текст помилки валідації</span>
         </div>
         @* amount *@
@@ -42,7 +43,10 @@
             <input asp-for="Amount" type="number" class="form-control" id="amount" placeholder="Введіть кількість">
             <span class="mx-2" style="color: red; font-size: 0.8rem;">Тут буде текст помилки валідації</span>
         </div>
-
+        <div class="form-group mb-3">
+            <label asp-for="CategoryId" class="form-label">Категорія</label>
+            <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select"></select>
+        </div>
         <div class="mt-4 text-center">
             <input type="submit" class="btn btn-primary w-50" value="Зберегти" />
         </div>
